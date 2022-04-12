@@ -1,0 +1,155 @@
+.modal {
+  background-image: url("../img/content/modal-back.jpg");
+  background-repeat: no-repeat;
+  background-color: $color-black-pearl;
+  background-size: cover;
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/content/modal-back-2x.jpg");
+  }
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  overflow-y: auto;
+  display: none;
+  pointer-events: none;
+  scrollbar-width: none;
+}
+
+.modal:target {
+  display: block;
+  pointer-events: auto;
+}
+
+.modal__сall-request {
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100%;
+}
+
+.modal__content {
+  position: relative;
+  min-height: 410px;
+  width: 500px;
+  padding: 38px 40px 45px;
+  margin-top: 145px;
+  margin-bottom: 84px;
+  background-color: $color-deep-sky-blue;
+  border-radius: 3px;
+}
+
+.modal__logo {
+  display: none;
+}
+
+.modal:target .modal__logo {
+  display: block;
+  cursor: pointer;
+  background-color: $color-black-pearl;
+  width: 215px;
+  margin-bottom: 30px;
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+
+    &:focus {
+      outline: $color-black-pearl auto 2px;
+      outline-offset: -2px;
+    }
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.modal__content h2 {
+  font-family: $ff-roboto;
+  font-size: 30px;
+  line-height: 42px;
+  font-weight: 400;
+  color: $color-white;
+  margin: 0;
+  margin-bottom: 3px;
+}
+
+.modal__content p {
+  line-height: 22px;
+  margin: 0;
+  margin-bottom: 38px;
+  width: 90%;
+  color: $color-white;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__overlay {
+  align-self: flex-start;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  cursor: pointer;
+}
+
+.modal:target .modal__overlay {
+  pointer-events: none;
+}
+
+.modal__close-btn {
+  display: block;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  background-color: inherit;
+  border: none;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 1;
+}
+
+.modal:target .modal__close-btn {
+  display: none;
+}
+
+.modal__textarea {
+  margin-bottom: 20px;
+}
+
+.modal__checkbox {
+  align-self: flex-start;
+  margin-top: 12px;
+  margin-left: 10px;
+}
+
+.modal__checkbox label {
+  width: 100%;
+  margin: 0;
+  padding-top: 7px;
+}
+
+.modal__button {
+  width: 100%;
+  margin: 0;
+}
+
+.modal.is-active {
+  display: block;
+  pointer-events: auto;
+}

@@ -1,0 +1,124 @@
+.footer {
+  background-color: $color-black-pearl;
+  flex-shrink: 0;
+}
+
+.footer__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
+  padding: 50px 25px 55px;
+  margin: 0 auto;
+  max-width: $vp-1272;
+  width: 100%;
+
+  @include vp-1023 {
+    padding: 50px 6.1% 58px 6.5%;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    padding-bottom: 35px;
+    width: 100%;
+  }
+}
+
+.footer__social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include vp-1023 {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 35px 42px 16px;
+    border-bottom: 1px solid $color-white-with-opacity-70;
+  }
+}
+
+.footer__logo {
+  margin-bottom: 30px;
+  width: 215px;
+  align-self: center;
+
+  @include vp-1023 {
+    margin-bottom: 36px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 15px;
+    margin-left: -3px;
+  }
+}
+
+.footer__main-logo {
+  pointer-events: none;
+}
+
+.footer__information {
+  display: flex;
+  width: 70%;
+
+  @include vp-1023 {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.footer a {
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+
+    &:focus {
+      outline: $color-deep-sky-blue solid 2px;
+      outline-offset: -2px;
+    }
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.footer h3 {
+  font-family: $ff-roboto;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: $color-white;
+  letter-spacing: 0.05em;
+  margin: 0;
+  margin-bottom: 22px;
+
+  @include vp-767 {
+    width: 100%;
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,146 @@
+.description {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0 25px 100px;
+  max-width: $vp-1272;
+  width: 100%;
+  text-align: left;
+
+  @include vp-1023 {
+    padding: 0 6% 80px;
+  }
+
+  @include vp-767 {
+    padding: 0 7% 80px;
+  }
+}
+
+.description img {
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.description__about-company {
+  width: 80%;
+  max-width: 970px;
+
+  @include vp-1023 {
+    width: 74%;
+    max-width: 100%;
+    margin-top: -5px;
+    margin-right: -2px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.description__about-company h2 {
+  font-family: $ff-roboto;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 51px;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 13px;
+
+  @include vp-767 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+}
+
+.description__information {
+  margin-bottom: 40px;
+
+  @include vp-1023 {
+    margin-bottom: 10px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 12px;
+  }
+}
+
+.description__information p {
+  line-height: 22px;
+  margin: 0;
+  margin-bottom: 20px;
+
+  @include vp-1023 {
+    width: 99%;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 18px;
+  }
+}
+
+.description__information span {
+  display: block;
+  line-height: 22px;
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+
+.description__hidden-mobile {
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.description__button {
+  padding: 14px;
+  line-height: 16px;
+  border: 1px solid $color-deep-sky-blue;
+  color: $color-deep-sky-blue;
+  width: 178px;
+
+  @include vp-1023 {
+    width: 180px;
+    margin-top: -5px;
+  }
+
+  @include vp-767 {
+    width: 160px;
+    margin-top: 0;
+    padding: 10px 14px 8px;
+  }
+}
+
+
+.description__hidden {
+  display: none;
+}
+
+.is-open .description__hidden {
+  display: block;
+}
+
+.is-open .description__hidden-mobile {
+  @include vp-767 {
+    display: block;
+  }
+}
+
+.no-js .description__hidden {
+  display: block;
+}
+
+.no-js .description__hidden-mobile {
+  @include vp-767 {
+    display: block;
+  }
+}
+
+.no-js .description__button {
+  display: none;
+}

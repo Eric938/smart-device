@@ -1,0 +1,36 @@
+.button {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: $ff-roboto;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  color: $color-alice-blue;
+  background-color: transparent;
+  text-align: center;
+  border-radius: 3px;
+  cursor: pointer;
+  user-select: none;
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+
+    &:focus {
+      outline: $color-black-pearl auto 2px;
+      outline-offset: -4px;
+    }
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
