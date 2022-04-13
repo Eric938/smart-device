@@ -1257,10 +1257,6 @@ input[type="checkbox"]:disabled + label::before {
   display: block;
 }
 
-.is-open .navigation__lists {
-  display: block;
-}
-
 .navigation__list {
   list-style: none;
   padding: 0;
@@ -1298,10 +1294,6 @@ input[type="checkbox"]:disabled + label::before {
 }
 
 .no-js .contacts__list {
-  display: block;
-}
-
-.is-open .contacts__list {
   display: block;
 }
 
@@ -2125,6 +2117,10 @@ input[type="checkbox"]:disabled + label::before {
     display: none;
   }
 
+  .is-open .navigation__lists {
+    display: block;
+  }
+
   .navigation__item {
     width: 100%;
   }
@@ -2144,6 +2140,10 @@ input[type="checkbox"]:disabled + label::before {
     padding: 0 8%;
     margin-bottom: 9px;
     display: none;
+  }
+
+  .is-open .contacts__list {
+    display: block;
   }
 
   .contacts__item p {

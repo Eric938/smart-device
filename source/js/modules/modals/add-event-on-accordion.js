@@ -1,5 +1,5 @@
 const accordionTabs = document.querySelectorAll('[data-accordion-tab]');
-const breakpointMobile = window.matchMedia('(max-width:767px)');
+const breakpointMobile = window.matchMedia('(max-width:1023px)');
 
 const addClassIsOpen = (target) => {
   target.classList.add('is-open');

@@ -35,7 +35,9 @@
 }
 
 .is-open .contacts__list {
-  display: block;
+  @include vp-767 {
+    display: block;
+  }
 }
 
 .contacts__item {
