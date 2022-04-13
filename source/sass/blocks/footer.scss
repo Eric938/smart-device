@@ -60,10 +60,10 @@
     margin-bottom: 15px;
     margin-left: -3px;
   }
-}
 
-.footer__main-logo {
-  pointer-events: none;
+  &--main {
+    pointer-events: none;
+  }
 }
 
 .footer__information {

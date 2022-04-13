@@ -6,7 +6,7 @@
   margin: 0 auto;
 
   @include vp-1023 {
-    padding: 80px 6.5%;
+    padding: 81px 6.5% 80px;
   }
 
   @include vp-767 {

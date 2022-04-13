@@ -39,7 +39,7 @@
   line-height: 22px;
   color: $color-white;
   margin: 0;
-  padding: 15px;
+  padding: 10px 14px 13px;
   width: 100%;
   height: 50px;
   background-color: $color-pacific-blue;
@@ -72,7 +72,7 @@
 
 .form textarea {
   height: 155px;
-  padding: 23px 15px;
+  padding: 23px 14px;
   resize: none;
 
   @include vp-1023 {

@@ -565,7 +565,7 @@ svg path {
   max-width: 1272px;
 }
 
-.header__main-logo {
+.header__logo--main {
   pointer-events: none;
 }
 
@@ -646,17 +646,22 @@ svg path {
   margin: 0;
   margin-bottom: 45px;
   width: 650px;
+  text-transform: lowercase;
 }
 
 .promo__button {
-  padding: 18px 25px;
-  font-size: 18px;
-  line-height: 21px;
+  padding: 18px 25px 16px;
   width: 410px;
   background-color: #00b2ff;
 }
 
-.promo__button--mobile {
+.promo__button-text {
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.05em;
+}
+
+.promo__button-text--mobile {
   display: none;
 }
 
@@ -774,6 +779,10 @@ svg path {
   display: none;
 }
 
+.description__hidden--mobile {
+  display: block;
+}
+
 .is-open .description__hidden {
   display: block;
 }
@@ -811,14 +820,11 @@ svg path {
   padding: 0;
   margin: 0;
   margin-bottom: 55px;
-}
-
-.services__desktop-title {
   width: 100%;
   max-width: 1220px;
 }
 
-.services__mobile-title {
+.services__title--mobile {
   display: none;
 }
 
@@ -852,6 +858,7 @@ svg path {
   position: absolute;
   bottom: 0;
   right: 0;
+  cursor: pointer;
 }
 
 .services__card:disabled {
@@ -884,7 +891,7 @@ svg path {
 .services__card span {
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-size: 20px;
-  line-height: 30px;
+  line-height: 29px;
   color: #ffffff;
   position: absolute;
   left: 40px;
@@ -926,7 +933,7 @@ svg path {
   line-height: 51px;
   font-weight: 400;
   margin: 0;
-  margin-bottom: 13px;
+  margin-bottom: 12px;
   margin-left: -5px;
 }
 
@@ -985,7 +992,7 @@ svg path {
   line-height: 22px;
   color: #ffffff;
   margin: 0;
-  padding: 15px;
+  padding: 10px 14px 13px;
   width: 100%;
   height: 50px;
   background-color: #019bdf;
@@ -1038,7 +1045,7 @@ svg path {
 
 .form textarea {
   height: 155px;
-  padding: 23px 15px;
+  padding: 23px 14px;
   resize: none;
 }
 
@@ -1167,7 +1174,7 @@ input[type="checkbox"]:disabled + label::before {
   align-self: center;
 }
 
-.footer__main-logo {
+.footer__logo--main {
   pointer-events: none;
 }
 
@@ -1307,7 +1314,7 @@ input[type="checkbox"]:disabled + label::before {
   color: #ffffff;
   opacity: 0.7;
   margin: 0;
-  margin-bottom: 9px;
+  margin-bottom: 7px;
 }
 
 .contacts__item a {
@@ -1637,11 +1644,12 @@ input[type="checkbox"]:disabled + label::before {
   }
 
   .promo__button {
+    padding: 16px 25px;
     margin-left: 45px;
   }
 
   .benefits {
-    padding: 80px 6.5%;
+    padding: 81px 6.5% 80px;
   }
 
   .benefits__card {
@@ -1694,7 +1702,7 @@ input[type="checkbox"]:disabled + label::before {
     margin-bottom: 37px;
   }
 
-  .services__desktop-title {
+  .services__title--desktop {
     max-width: 100%;
   }
 
@@ -1710,6 +1718,7 @@ input[type="checkbox"]:disabled + label::before {
   }
 
   .services__card span {
+    line-height: 30px;
     left: 45px;
     top: 38px;
   }
@@ -1805,10 +1814,6 @@ input[type="checkbox"]:disabled + label::before {
     width: 48%;
     margin: 0;
   }
-
-  .contacts__item p {
-    margin-bottom: 7px;
-  }
 }
 
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1023px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 1023px) and (min-resolution: 192dpi), (max-width: 1023px) and (min-resolution: 2dppx) {
@@ -1857,18 +1862,21 @@ input[type="checkbox"]:disabled + label::before {
   }
 
   .promo__button {
-    font-size: 14px;
-    line-height: 16px;
     padding: 12px 30px;
     width: auto;
     margin-left: 0;
   }
 
-  .promo__button--desktop {
+  .promo__button-text {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .promo__button-text--desktop {
     display: none;
   }
 
-  .promo__button--mobile {
+  .promo__button-text--mobile {
     display: block;
   }
 
@@ -1934,14 +1942,14 @@ input[type="checkbox"]:disabled + label::before {
     line-height: 19px;
   }
 
-  .description__hidden-mobile {
-    display: none;
-  }
-
   .description__button {
     width: 160px;
     margin-top: 0;
     padding: 10px 14px 8px;
+  }
+
+  .description__hidden--mobile {
+    display: none;
   }
 
   .is-open .description__hidden-mobile {
@@ -1957,6 +1965,14 @@ input[type="checkbox"]:disabled + label::before {
   }
 
   .services h2 {
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     font-size: 28px;
     line-height: 40px;
     margin-bottom: 27px;
@@ -1964,11 +1980,11 @@ input[type="checkbox"]:disabled + label::before {
     width: 90%;
   }
 
-  .services__desktop-title {
+  .services__title--desktop {
     display: none;
   }
 
-  .services__mobile-title {
+  .services__title--mobile {
     display: block;
   }
 
@@ -2133,7 +2149,7 @@ input[type="checkbox"]:disabled + label::before {
   .contacts__item p {
     font-size: 14px;
     line-height: 19px;
-    margin-bottom: 18px;
+    margin-bottom: 16px;
   }
 
   .contacts__item a {
