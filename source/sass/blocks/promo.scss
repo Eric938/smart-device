@@ -5,8 +5,10 @@
   background-color: $color-blue-whale;
   background-size: cover;
 
-  @include retina {
-    background-image: url("../img/content/promo-back-2x.jpg");
+  @media (min-width: $vp-1024) {
+    @include retina {
+      background-image: url("../img/content/promo-back-2x.jpg");
+    }
   }
 
   @include vp-1023 {

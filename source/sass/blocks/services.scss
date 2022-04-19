@@ -65,7 +65,7 @@
 
 .services__cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 350px);
+  grid-template-columns: repeat(3, auto);
   justify-content: center;
   gap: 85px;
   list-style: none;
@@ -80,7 +80,7 @@
   }
 
   @include vp-767 {
-    grid-template-columns: repeat(1, 270px);
+    grid-template-columns: repeat(1, 100%);
     gap: 30px;
   }
 }
@@ -163,7 +163,8 @@
   }
 
   @include vp-767 {
-    width: 270px;
+    height: 250px;
+    width: 100%;
   }
 }
 
